@@ -1,10 +1,15 @@
-public class Ddd2 {
+import java.util.Scanner;
+
+public class DDD2 {
     public static void main(String[] args){
-        int ddd = 10;
-        String capital = switch(ddd) {
+        Scanner sc = new Scanner(System.in);
+        int ddd = sc.nextInt();
+        String resposta = switch(ddd) {
+            case 61 -> "Brasilia";
+            case 72 -> "Salvador"; 
             case 11 -> "Sao Paulo";
             default -> "DDD nao cadastrado";
         };
-        System.out.println(capital);
-    }    
+        System.out.println(resposta);
+    }
 }
