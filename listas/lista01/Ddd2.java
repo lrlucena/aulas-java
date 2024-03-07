@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DDD2 {
+public class Ddd2 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int ddd = sc.nextInt();
