@@ -12,7 +12,7 @@ public class fila2{
             int contador = 0;
             int[] vet = new int[M];
 
-            for(int j=M-1; j>=0; j++){
+            for(int j=M-1; j>=0; j--){
                 vet[j] = x.nextInt();
             }
             // ORDENANDO O VETOR EM ORDEM DECRESCENTE
