@@ -15,6 +15,7 @@ public class validacao{
                 System.out.println("nota invalida");
             }
         }
+        n.close();
         double media = soma / 2.0;
         System.out.println("media = " + media);
     }
