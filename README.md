@@ -1,4 +1,4 @@
-# Aulas da Disciplina de Programação Orientada a Objetos com Java
+# Programação Orientada a Objetos com Java
 
 ## Para atualizar a versão do Java
 
