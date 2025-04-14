@@ -1,0 +1,41 @@
+
+:root {
+    --md-primary-fg-color: #006633;    /* Verde oficial IFRN */
+    --md-accent-fg-color:  #FFCC00;    /* Amarelo oficial IFRN */
+  }
+  
+  .md-header {
+    background-color: #006633;
+  }
+  
+  .md-tabs {
+    background-color: #004d26;
+  }
+  
+  .md-footer {
+    background-color: #004d26;
+  }
+  
+  .md-footer-meta {
+    background-color: #003319;
+  }
+  
+  /* Botões personalizados */
+  .md-button--ifrn {
+    border: 1px solid #FFCC00;
+    color: #FFCC00 !important;
+    margin: 0.5em;
+  }
+  
+  .md-button--ifrn:hover {
+    background-color: #FFCC00;
+    color: #006633 !important;
+  }
+  
+  /* Cards para materiais */
+  .ifrn-card {
+    border: 1px solid #006633;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem 0;
+  }

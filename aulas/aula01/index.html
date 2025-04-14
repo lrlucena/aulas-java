@@ -1,0 +1,1208 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Site da disciplina">
+      
+      
+      
+        <link rel="canonical" href="https://lrlucena.github.io/aulas-java/aulas/aula01/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../aula02/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Aula 01 - Linguagem Java - 🚀 Programação Orientada a Objetos com Java</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="yellow">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aula-01-linguagem-java" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="🚀 Programação Orientada a Objetos com Java" class="md-header__button md-logo" aria-label="🚀 Programação Orientada a Objetos com Java" data-md-component="logo">
+      
+  <img src="../../assets/images/logo-ifrn.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            🚀 Programação Orientada a Objetos com Java
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aula 01 - Linguagem Java
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lrlucena/aulas-java" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Aulas
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../instalacao/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Instalacao
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="🚀 Programação Orientada a Objetos com Java" class="md-nav__button md-logo" aria-label="🚀 Programação Orientada a Objetos com Java" data-md-component="logo">
+      
+  <img src="../../assets/images/logo-ifrn.png" alt="logo">
+
+    </a>
+    🚀 Programação Orientada a Objetos com Java
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lrlucena/aulas-java" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Início
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Aulas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Aulas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Aula 01 - Linguagem Java
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aula 01 - Linguagem Java
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#surgimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Surgimento
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparacao-java-x-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparação Java x Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evolucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evolução
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aula 02 - 🖥️ Como o Java Funciona
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aula 03 - 📦 Tipos Primitivos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ⌨️ Aula 04 - Entrada e Saída
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../instalacao/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Instalacao
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Instalacao
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="aula-01-linguagem-java">Aula 01 - Linguagem Java<a class="headerlink" href="#aula-01-linguagem-java" title="Permanent link">&para;</a></h1>
+<h2 id="surgimento">Surgimento<a class="headerlink" href="#surgimento" title="Permanent link">&para;</a></h2>
+<p>Quando Java foi lançada em 1995, ela se destacou das outras linguagens de programação devido a várias características inovadoras. Aqui estão as principais que a diferenciaram na época:</p>
+<h3 id="1-write-once-run-anywhere-wora-portabilidade">1. <strong>"Write Once, Run Anywhere" (WORA) – Portabilidade</strong><a class="headerlink" href="#1-write-once-run-anywhere-wora-portabilidade" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Java foi projetada para ser <strong>independente de plataforma</strong>, graças à <strong>Java Virtual Machine (JVM)</strong>.</li>
+<li>O código Java é compilado para <strong>bytecode</strong>, que pode ser executado em qualquer dispositivo com uma JVM, sem necessidade de recompilação.</li>
+<li>Isso foi revolucionário em comparação com linguagens como C e C++, que exigiam compilação específica para cada sistema operacional.</li>
+</ul>
+<h3 id="2-orientacao-a-objetos-pura-oop">2. <strong>Orientação a Objetos Pura (OOP)</strong><a class="headerlink" href="#2-orientacao-a-objetos-pura-oop" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Java foi uma das primeiras linguagens a adotar <strong>orientação a objetos de forma consistente</strong> (com exceção dos tipos primitivos).</li>
+<li>Recursos como <strong>herança, encapsulamento e polimorfismo</strong> foram implementados de maneira mais rígida do que em C++.</li>
+</ul>
+<h3 id="3-gerenciamento-automatico-de-memoria-garbage-collection">3. <strong>Gerenciamento Automático de Memória (Garbage Collection)</strong><a class="headerlink" href="#3-gerenciamento-automatico-de-memoria-garbage-collection" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Java introduziu um <strong>coletor de lixo (garbage collector)</strong> que automaticamente liberava memória não utilizada.</li>
+<li>Em linguagens como C e C++, o programador precisava gerenciar memória manualmente (com <code>malloc</code>/<code>free</code> ou <code>new</code>/<code>delete</code>), o que podia levar a vazamentos e erros.</li>
+</ul>
+<h3 id="4-seguranca">4. <strong>Segurança</strong><a class="headerlink" href="#4-seguranca" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Java foi criada com foco em segurança, especialmente para execução de código remoto (como applets em navegadores).</li>
+<li>A JVM tinha um <strong>verificador de bytecode (bytecode verifier)</strong> para evitar operações maliciosas.</li>
+<li>Não havia ponteiros explícitos (como em C/C++), reduzindo riscos de acesso indevido à memória.</li>
+</ul>
+<h3 id="5-multithreading-integrado">5. <strong>Multithreading Integrado</strong><a class="headerlink" href="#5-multithreading-integrado" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Java trouxe suporte nativo a <strong>threads</strong>, facilitando a programação concorrente.</li>
+<li>Em outras linguagens, como C, o multithreading exigia bibliotecas externas ou chamadas específicas do sistema operacional.</li>
+</ul>
+<h3 id="6-ausencia-de-ponteiros-explicitos">6. <strong>Ausência de Ponteiros Explícitos</strong><a class="headerlink" href="#6-ausencia-de-ponteiros-explicitos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Java removeu a aritmética de ponteiros, presente em C/C++, evitando erros comuns como <strong>corrupção de memória</strong> e <strong>acessos inválidos</strong>.</li>
+</ul>
+<h3 id="7-biblioteca-padrao-rica-java-api">7. <strong>Biblioteca Padrão Rica (Java API)</strong><a class="headerlink" href="#7-biblioteca-padrao-rica-java-api" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Java foi lançada com uma biblioteca robusta, incluindo:<ul>
+<li>Coleções (<code>java.util.*</code>)</li>
+<li>Rede (<code>java.net.*</code>)</li>
+<li>E/S (<code>java.io.*</code>)</li>
+<li>Interface gráfica básica (<code>AWT</code>, depois <code>Swing</code>)</li>
+</ul>
+</li>
+</ul>
+<h3 id="8-linguagem-simples-comparada-a-c">8. <strong>Linguagem Simples (Comparada a C++)</strong><a class="headerlink" href="#8-linguagem-simples-comparada-a-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Java eliminou complexidades do C++, como:<ul>
+<li>Herança múltipla (substituída por interfaces).</li>
+<li>Sobrecarga de operadores.</li>
+<li>Templates (genéricos só foram adicionados posteriormente).</li>
+</ul>
+</li>
+</ul>
+<h3 id="9-suporte-a-rede-e-internet">9. <strong>Suporte a Rede e Internet</strong><a class="headerlink" href="#9-suporte-a-rede-e-internet" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Java foi criada na era da internet e trouxe recursos nativos para programação em rede, como sockets e HTTP.</li>
+</ul>
+<h3 id="10-applets-inovacao-na-web">10. <strong>Applets (Inovação na Web)</strong><a class="headerlink" href="#10-applets-inovacao-na-web" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Os <strong>applets Java</strong> permitiam executar código dinâmico em navegadores, algo revolucionário nos anos 90 (antes do JavaScript dominar).</li>
+</ul>
+<h3 id="comparacao-com-linguagens-da-epoca-1995">Comparação com Linguagens da Época (1995):<a class="headerlink" href="#comparacao-com-linguagens-da-epoca-1995" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Java</th>
+<th>C/C++</th>
+<th>Pascal</th>
+<th>Visual Basic</th>
+<th>Perl/Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Portável (JVM)</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅ (interpretado)</td>
+</tr>
+<tr>
+<td>Garbage Collection</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Orientação a Objetos</td>
+<td>✅</td>
+<td>✅ (C++)</td>
+<td>❌</td>
+<td>Parcial</td>
+<td>✅ (Python)</td>
+</tr>
+<tr>
+<td>Multithreading</td>
+<td>✅</td>
+<td>❌ (depende do SO)</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅ (limitado)</td>
+</tr>
+<tr>
+<td>Segurança</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<h3 id="conclusao">Conclusão:<a class="headerlink" href="#conclusao" title="Permanent link">&para;</a></h3>
+<p>Java se diferenciou por ser <strong>portável, segura, orientada a objetos e com gerenciamento automático de memória</strong>, combinando o melhor de linguagens como C++ e Smalltalk, enquanto eliminava suas complexidades. Isso a tornou ideal para a internet emergente e aplicações empresariais.</p>
+<hr />
+<h2 id="comparacao-java-x-python">Comparação Java x Python<a class="headerlink" href="#comparacao-java-x-python" title="Permanent link">&para;</a></h2>
+<p>A comparação entre <strong>Java</strong> e <strong>Python</strong> hoje envolve diferenças significativas em desempenho, sintaxe, ecossistema e casos de uso. Vamos analisar os principais aspectos:</p>
+<hr />
+<h3 id="1-paradigma-e-sintaxe"><strong>1. Paradigma e Sintaxe</strong><a class="headerlink" href="#1-paradigma-e-sintaxe" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Característica</strong></th>
+<th><strong>Java</strong></th>
+<th><strong>Python</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Paradigma</strong></td>
+<td>Orientado a objetos (rígido)</td>
+<td>Multiparadigma (OO, funcional, procedural)</td>
+</tr>
+<tr>
+<td><strong>Sintaxe</strong></td>
+<td>Verbosa (exige tipos e <code>{}</code>)</td>
+<td>Concisa e legível (indentação obrigatória)</td>
+</tr>
+<tr>
+<td><strong>Exemplo (Hello World)</strong></td>
+<td><code>System.out.println("Hello");</code></td>
+<td><code>print("Hello")</code></td>
+</tr>
+<tr>
+<td><strong>Tipagem</strong></td>
+<td>Estática e forte</td>
+<td>Dinâmica e forte</td>
+</tr>
+</tbody>
+</table>
+<p>🔹 <strong>Python</strong> é mais fácil para scripts rápidos, enquanto <strong>Java</strong> exige mais estrutura.</p>
+<hr />
+<h3 id="2-desempenho"><strong>2. Desempenho</strong><a class="headerlink" href="#2-desempenho" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Característica</strong></th>
+<th><strong>Java</strong></th>
+<th><strong>Python</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Compilação</strong></td>
+<td>Bytecode (JVM)</td>
+<td>Interpretado (com otimizações em CPython)</td>
+</tr>
+<tr>
+<td><strong>Velocidade</strong></td>
+<td>Mais rápido (JIT da JVM)</td>
+<td>Mais lento (exceto com PyPy/Cython)</td>
+</tr>
+<tr>
+<td><strong>Uso de Memória</strong></td>
+<td>Alto (JVM)</td>
+<td>Geralmente menor</td>
+</tr>
+</tbody>
+</table>
+<p>🔹 <strong>Java</strong> é melhor para aplicações de alto desempenho (ex: sistemas financeiros).<br />
+🔹 <strong>Python</strong> é suficiente para scripts, automação e prototipagem.</p>
+<hr />
+<h3 id="3-ecossistema-e-bibliotecas"><strong>3. Ecossistema e Bibliotecas</strong><a class="headerlink" href="#3-ecossistema-e-bibliotecas" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Área</strong></th>
+<th><strong>Java</strong></th>
+<th><strong>Python</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Web (Backend)</strong></td>
+<td>Spring, Jakarta EE</td>
+<td>Django, Flask, FastAPI</td>
+</tr>
+<tr>
+<td><strong>Ciência de Dados</strong></td>
+<td>Weka, Deeplearning4j</td>
+<td>Pandas, NumPy, TensorFlow, PyTorch</td>
+</tr>
+<tr>
+<td><strong>Automação/DevOps</strong></td>
+<td>Maven, Gradle</td>
+<td>Scripting nativo, Ansible</td>
+</tr>
+<tr>
+<td><strong>Mobile</strong></td>
+<td>Android (Kotlin está substituindo)</td>
+<td>Kivy (pouco usado)</td>
+</tr>
+</tbody>
+</table>
+<p>🔹 <strong>Python</strong> domina em <strong>IA, dados e scripts</strong>.<br />
+🔹 <strong>Java</strong> é forte em <strong>aplicações empresariais, bancos e Android</strong>.</p>
+<hr />
+<h3 id="4-concorrencia-e-multithreading"><strong>4. Concorrência e Multithreading</strong><a class="headerlink" href="#4-concorrencia-e-multithreading" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Característica</strong></th>
+<th><strong>Java</strong></th>
+<th><strong>Python</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Threads</strong></td>
+<td>Nativo (mas pesado)</td>
+<td>Limitado pelo GIL (Global Interpreter Lock)</td>
+</tr>
+<tr>
+<td><strong>Alternativas</strong></td>
+<td>Virtual Threads (Java 21+)</td>
+<td>Multiprocessamento (<code>multiprocessing</code>) ou async (asyncio)</td>
+</tr>
+</tbody>
+</table>
+<p>🔹 <strong>Java</strong> é melhor para aplicações concorrentes pesadas.<br />
+🔹 <strong>Python</strong> sofre com o GIL, mas compensa com <strong>assincronia</strong> (FastAPI) ou processos paralelos.</p>
+<hr />
+<h3 id="5-seguranca-e-manutencao"><strong>5. Segurança e Manutenção</strong><a class="headerlink" href="#5-seguranca-e-manutencao" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Característica</strong></th>
+<th><strong>Java</strong></th>
+<th><strong>Python</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Verificação de Tipos</strong></td>
+<td>Compilação rigorosa</td>
+<td>Erros só em runtime</td>
+</tr>
+<tr>
+<td><strong>Legado Corporativo</strong></td>
+<td>Muito usado em bancos e governo</td>
+<td>Mais comum em startups e pesquisa</td>
+</tr>
+</tbody>
+</table>
+<p>🔹 <strong>Java</strong> é mais seguro para sistemas críticos (ex: bancos).<br />
+🔹 <strong>Python</strong> é ágil, mas pode esconder bugs até a execução.</p>
+<hr />
+<h3 id="6-mercado-de-trabalho"><strong>6. Mercado de Trabalho</strong><a class="headerlink" href="#6-mercado-de-trabalho" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Característica</strong></th>
+<th><strong>Java</strong></th>
+<th><strong>Python</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Demanda</strong></td>
+<td>Alta em empresas tradicionais</td>
+<td>Explosão em IA, dados e startups</td>
+</tr>
+<tr>
+<td><strong>Salários</strong></td>
+<td>Consistentes (especialmente em fintechs)</td>
+<td>Altos em áreas de dados/ML</td>
+</tr>
+</tbody>
+</table>
+<p>🔹 <strong>Java</strong> ainda domina em vagas de <strong>backend corporativo</strong>.<br />
+🔹 <strong>Python</strong> lidera em <strong>ciência de dados e automação</strong>.</p>
+<hr />
+<h3 id="quando-usar-cada-um"><strong>Quando Usar Cada Um?</strong><a class="headerlink" href="#quando-usar-cada-um" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Escolha Java se:</strong>  </li>
+<li>Precisar de alta performance e escalabilidade (ex: sistemas bancários).  </li>
+<li>Desenvolver para <strong>Android</strong> (embora Kotlin seja preferido hoje).  </li>
+<li>
+<p>Trabalhar em grandes empresas com legado Java (ex: Oracle, IBM).  </p>
+</li>
+<li>
+<p><strong>Escolha Python se:</strong>  </p>
+</li>
+<li>Prototipar rápido ou trabalhar com <strong>dados/IA</strong> (ML, análise de dados).  </li>
+<li>Escrever scripts ou automações (DevOps, web scraping).  </li>
+<li>Priorizar produtividade em vez de desempenho bruto.  </li>
+</ul>
+<hr />
+<h3 id="conclusao_1"><strong>Conclusão</strong><a class="headerlink" href="#conclusao_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Java</strong> é <strong>poderoso, estruturado e rápido</strong>, mas exige mais código.  </li>
+<li><strong>Python</strong> é <strong>flexível e produtivo</strong>, mas menos eficiente em performance pura.  </li>
+</ul>
+<p>Ambos têm espaço no mercado, mas a escolha depende do <strong>projeto</strong> e do <strong>contexto</strong>. Se precisar de um meio-termo, linguagens como <strong>Kotlin</strong> (JVM) ou <strong>Go</strong> podem ser alternativas.</p>
+<hr />
+<p>A linguagem <strong>Java</strong> passou por diversas mudanças significativas desde seu lançamento em 1996 até a versão <strong>25 (JDK 25)</strong>, prevista para setembro de 2025. Vamos explorar sua evolução, destacando as principais features e mudanças em cada versão:</p>
+<hr />
+<h2 id="evolucao"><strong>Evolução</strong><a class="headerlink" href="#evolucao" title="Permanent link">&para;</a></h2>
+<h3 id="jdk-10-1996-o-comeco"><strong>📌 JDK 1.0 (1996) – O Começo</strong><a class="headerlink" href="#jdk-10-1996-o-comeco" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Primeira versão pública.</li>
+<li><strong>Principais recursos</strong>:</li>
+<li>Applets Java (para navegadores).</li>
+<li>Biblioteca básica (AWT, IO, Threads).</li>
+<li>JVM (Java Virtual Machine).</li>
+</ul>
+<h3 id="jdk-11-1997-melhorias-iniciais"><strong>📌 JDK 1.1 (1997) – Melhorias Iniciais</strong><a class="headerlink" href="#jdk-11-1997-melhorias-iniciais" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Inner Classes</strong> (classes aninhadas).</li>
+<li><strong>JDBC</strong> (conexão com bancos de dados).</li>
+<li><strong>RMI</strong> (Remote Method Invocation).</li>
+<li><strong>Reflection API</strong>.</li>
+</ul>
+<h3 id="j2se-12-1998-java-2-platform"><strong>📌 J2SE 1.2 (1998) – Java 2 Platform</strong><a class="headerlink" href="#j2se-12-1998-java-2-platform" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Divisão em <strong>J2SE, J2EE, J2ME</strong>.</li>
+<li><strong>Collections Framework</strong> (<code>List</code>, <code>Set</code>, <code>Map</code>).</li>
+<li><strong>Swing</strong> (substituiu parcialmente AWT).</li>
+<li><strong>JIT Compiler</strong> (melhor desempenho).</li>
+</ul>
+<h3 id="j2se-14-2002-maturacao"><strong>📌 J2SE 1.4 (2002) – Maturação</strong><a class="headerlink" href="#j2se-14-2002-maturacao" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Expressões Regulares</strong> (<code>java.util.regex</code>).</li>
+<li><strong>NIO</strong> (New I/O para operações não-bloqueantes).</li>
+<li><strong>Logging API</strong> (<code>java.util.logging</code>).</li>
+<li><strong>Assertions</strong> (<code>assert</code> keyword).</li>
+</ul>
+<h3 id="java-5-2004-revolucao-jdk-15"><strong>📌 Java 5 (2004) – Revolução (JDK 1.5)</strong><a class="headerlink" href="#java-5-2004-revolucao-jdk-15" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Generics</strong> (<code>List&lt;String&gt;</code>).</li>
+<li><strong>Anotações</strong> (<code>@Override</code>, <code>@Deprecated</code>).</li>
+<li><strong>Varargs</strong> (<code>void method(String... args)</code>).</li>
+<li><strong>Enhanced for-loop</strong> (<code>for (String s : list)</code>).</li>
+<li><strong>Enums</strong> (<code>enum Season { SPRING, SUMMER }</code>).</li>
+</ul>
+<h3 id="java-6-2006-estabilidade"><strong>📌 Java 6 (2006) – Estabilidade</strong><a class="headerlink" href="#java-6-2006-estabilidade" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Scripting Engine</strong> (suporte a linguagens como JavaScript via <code>javax.script</code>).</li>
+<li><strong>JDBC 4.0</strong> (melhorias em conexão com bancos).</li>
+<li><strong>Java Compiler API</strong> (programaticamente compilar código).</li>
+</ul>
+<h3 id="java-7-2011-projeto-coin-pequenas-melhorias"><strong>📌 Java 7 (2011) – Projeto Coin (pequenas melhorias)</strong><a class="headerlink" href="#java-7-2011-projeto-coin-pequenas-melhorias" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Strings em switch</strong> (<code>switch (str) { ... }</code>).</li>
+<li><strong>Try-with-resources</strong> (<code>try (FileInputStream fis = ...)</code>).</li>
+<li><strong>Diamond Operator</strong> (<code>List&lt;String&gt; list = new ArrayList&lt;&gt;()</code>).</li>
+<li><strong>NIO.2</strong> (<code>Files</code>, <code>Paths</code> para manipulação de arquivos).</li>
+</ul>
+<h3 id="java-8-2014-a-grande-revolucao-lambdas-streams"><strong>📌 Java 8 (2014) – A Grande Revolução (Lambdas + Streams)</strong><a class="headerlink" href="#java-8-2014-a-grande-revolucao-lambdas-streams" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Lambdas</strong> (<code>(x, y) -&gt; x + y</code>).</li>
+<li><strong>Stream API</strong> (<code>list.stream().filter(...).map(...)</code>).</li>
+<li><strong>Optional</strong> (evitar <code>NullPointerException</code>).</li>
+<li><strong>Default Methods</strong> em interfaces (<code>default void log() { ... }</code>).</li>
+<li><strong>Nova API de Data/Hora</strong> (<code>java.time</code>).</li>
+</ul>
+<h3 id="java-9-2017-modularidade-project-jigsaw"><strong>📌 Java 9 (2017) – Modularidade (Project Jigsaw)</strong><a class="headerlink" href="#java-9-2017-modularidade-project-jigsaw" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Módulos</strong> (<code>module-info.java</code>).</li>
+<li><strong>JShell</strong> (REPL interativo).</li>
+<li><strong>Factory Methods para Collections</strong> (<code>List.of(1, 2, 3)</code>).</li>
+</ul>
+<h3 id="java-10-2018-inferencia-de-tipo-local"><strong>📌 Java 10 (2018) – Inferência de Tipo Local</strong><a class="headerlink" href="#java-10-2018-inferencia-de-tipo-local" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>var</code></strong> (<code>var list = new ArrayList&lt;String&gt;()</code>).</li>
+</ul>
+<h3 id="java-11-2018-lts-long-term-support"><strong>📌 Java 11 (2018) – LTS (Long-Term Support)</strong><a class="headerlink" href="#java-11-2018-lts-long-term-support" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>HTTP Client</strong> (API nativa <code>java.net.http</code>).</li>
+<li><strong>Remoção de recursos</strong> (Applets, JavaFX separado).</li>
+<li><strong><code>String::lines</code>, <code>isBlank()</code></strong>.</li>
+</ul>
+<h3 id="java-12-16-2019-2021-novidades-incrementais"><strong>📌 Java 12-16 (2019-2021) – Novidades Incrementais</strong><a class="headerlink" href="#java-12-16-2019-2021-novidades-incrementais" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Switch Expressions</strong> (Java 14):
+  <div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">dayType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">day</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;MON&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TUE&quot;</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Weekday&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Weekend&quot;</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div></li>
+<li><strong>Records</strong> (Java 16) – Classes imutáveis simplificadas:
+  <div class="highlight"><pre><span></span><code><span class="kd">record</span> <span class="nc">Person</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+</code></pre></div></li>
+<li><strong>Text Blocks</strong> (Java 15) – Strings multilinha:
+  <div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">    { &quot;name&quot;: &quot;Java&quot;, &quot;version&quot;: 15 }</span>
+<span class="s">&quot;&quot;&quot;</span><span class="p">;</span>
+</code></pre></div></li>
+<li><strong>Pattern Matching for <code>instanceof</code></strong> (Java 16):
+  <div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">obj</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">());</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="java-17-2021-lts-atual-estavel-em-2024"><strong>📌 Java 17 (2021) – LTS (Atual Estável em 2024)</strong><a class="headerlink" href="#java-17-2021-lts-atual-estavel-em-2024" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Sealed Classes</strong> (limita herança):
+  <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">sealed</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Shape</span><span class="w"> </span><span class="n">permits</span><span class="w"> </span><span class="n">Circle</span><span class="p">,</span><span class="w"> </span><span class="n">Square</span><span class="w"> </span><span class="p">{}</span>
+</code></pre></div></li>
+<li><strong>Novo Garbage Collector (ZGC, Shenandoah)</strong>.</li>
+<li><strong><code>switch</code> com padrões (preview)</strong>.</li>
+</ul>
+<h3 id="java-18-24-2022-2024-novidades-continuas"><strong>📌 Java 18-24 (2022-2024) – Novidades Contínuas</strong><a class="headerlink" href="#java-18-24-2022-2024-novidades-continuas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Java 18</strong>: UTF-8 por padrão, API de vetores (incubadora).</li>
+<li><strong>Java 19</strong>: Virtual Threads (Project Loom – concorrência leve).</li>
+<li><strong>Java 20</strong>: Scoped Values (alternativa a <code>ThreadLocal</code>).</li>
+<li><strong>Java 21 (LTS, 2023)</strong>: Virtual Threads estáveis, <code>SequencedCollection</code>.</li>
+<li><strong>Java 22-24</strong>: Melhorias incrementais em pattern matching, performance.</li>
+</ul>
+<h3 id="java-25-previsto-para-set2025-o-que-esperar"><strong>📌 Java 25 (Previsto para Set/2025) – O Que Esperar?</strong><a class="headerlink" href="#java-25-previsto-para-set2025-o-que-esperar" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Aprimoramento do Project Loom</strong> (mais recursos para virtual threads).</li>
+<li><strong>Novas APIs de concorrência</strong>.</li>
+<li><strong>Possível evolução do pattern matching</strong>.</li>
+<li><strong>Melhorias na JVM</strong> (desempenho, segurança).</li>
+</ul>
+<hr />
+<h3 id="resumo-da-evolucao-do-java"><strong>Resumo da Evolução do Java</strong><a class="headerlink" href="#resumo-da-evolucao-do-java" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Versão</strong></th>
+<th><strong>Ano</strong></th>
+<th><strong>Destaques</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>1996</td>
+<td>Applets, JVM básica</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>1998</td>
+<td>Collections, Swing</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2004</td>
+<td>Generics, Annotations, Enums</td>
+</tr>
+<tr>
+<td>8</td>
+<td>2014</td>
+<td>Lambdas, Streams, Optional</td>
+</tr>
+<tr>
+<td>9</td>
+<td>2017</td>
+<td>Módulos (Project Jigsaw)</td>
+</tr>
+<tr>
+<td>11 (LTS)</td>
+<td>2018</td>
+<td>HTTP Client, <code>var</code></td>
+</tr>
+<tr>
+<td>17 (LTS)</td>
+<td>2021</td>
+<td>Sealed Classes, ZGC</td>
+</tr>
+<tr>
+<td>21 (LTS)</td>
+<td>2023</td>
+<td>Virtual Threads estáveis</td>
+</tr>
+<tr>
+<td>25</td>
+<td>2025</td>
+<td>Mais concorrência, performance</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="conclusao_2"><strong>Conclusão</strong><a class="headerlink" href="#conclusao_2" title="Permanent link">&para;</a></h3>
+<p>Java evoluiu de uma linguagem para <strong>applets</strong> nos anos 90 para uma plataforma robusta usada em <strong>cloud, big data e sistemas críticos</strong>. As principais revoluções foram:
+1. <strong>Java 5 (Generics, Annotations)</strong><br />
+2. <strong>Java 8 (Lambdas, Streams)</strong><br />
+3. <strong>Java 9 (Modularidade)</strong><br />
+4. <strong>Java 17+ (Concorrência moderna com Virtual Threads)</strong>  </p>
+<p>A linguagem continua se modernizando, competindo com Kotlin, Go e Rust, mas mantendo seu ecossistema gigante. 🚀</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ifrn" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
