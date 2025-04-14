@@ -16,7 +16,7 @@
         <link rel="prev" href="../aula03/">
       
       
-        <link rel="next" href="../../instalacao/">
+        <link rel="next" href="../aula05/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>⌨️ Aula 04 - Entrada e Saída - 🚀 Programação Orientada a Objetos com Java</title>
+        <title>Aula 04 - 📦 Variáveis - 🚀 Programação Orientada a Objetos com Java</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#aula-04-entrada-e-saida" class="md-skip">
+        <a href="#o-que-sao-variaveis" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ⌨️ Aula 04 - Entrada e Saída
+              Aula 04 - 📦 Variáveis
             
           </span>
         </div>
@@ -340,6 +340,8 @@
       
         
       
+        
+      
     
     
     
@@ -459,15 +461,16 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   
   <span class="md-ellipsis">
-    ⌨️ Aula 04 - Entrada e Saída
+    Aula 04 - 📦 Variáveis
+    
+      <br>
+      <small>Armazenando Dados</small>
     
   </span>
   
@@ -480,7 +483,10 @@
   
   
   <span class="md-ellipsis">
-    ⌨️ Aula 04 - Entrada e Saída
+    Aula 04 - 📦 Variáveis
+    
+      <br>
+      <small>Armazenando Dados</small>
     
   </span>
   
@@ -493,8 +499,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -503,54 +507,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#saida-padrao-console" class="md-nav__link">
+  <a href="#o-que-sao-variaveis" class="md-nav__link">
     <span class="md-ellipsis">
-      📤 Saída Padrão (Console)
+      📌 O Que São Variáveis?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#entrada-com-scanner" class="md-nav__link">
+  <a href="#declaracao-e-inicializacao" class="md-nav__link">
     <span class="md-ellipsis">
-      📥 Entrada com Scanner
+      🔧 Declaração e Inicialização
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionamento-do-scanner" class="md-nav__link">
+  <a href="#tipos-de-variaveis" class="md-nav__link">
     <span class="md-ellipsis">
-      Funcionamento do Scanner
+      🧩 Tipos de Variáveis
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exemplo-completo" class="md-nav__link">
+  <a href="#escopo-de-variaveis" class="md-nav__link">
     <span class="md-ellipsis">
-      Exemplo Completo
+      🌐 Escopo de Variáveis
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resumo" class="md-nav__link">
+  <a href="#inferencia-de-tipo-com-var-java-10" class="md-nav__link">
     <span class="md-ellipsis">
-      Resumo
+      🆕 Inferência de Tipo com var (Java 10+)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#entrada-com-console" class="md-nav__link">
+  <a href="#constantes-final" class="md-nav__link">
     <span class="md-ellipsis">
-      🆕 Entrada com Console
+      🔒 Constantes (final)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erros-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Erros Comuns
     </span>
   </a>
   
@@ -569,6 +582,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ⌨️ Aula 05 - Entrada e Saída
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -658,295 +694,187 @@
   
 
 
-<h1 id="aula-04-entrada-e-saida">⌨️ Aula 04 - Entrada e Saída<a class="headerlink" href="#aula-04-entrada-e-saida" title="Permanent link">&para;</a></h1>
-<p>Aprenda a ler dados do teclado e exibir resultados no console usando Java.</p>
+  <h1>Aula 04 - 📦 Variáveis</h1>
+
+<p>Variáveis são containers para armazenar dados em memória. Nesta aula, você aprenderá a declarar, inicializar e usar variáveis de forma eficaz.</p>
 <hr />
-<h2 id="saida-padrao-console">📤 <strong>Saída Padrão (Console)</strong><a class="headerlink" href="#saida-padrao-console" title="Permanent link">&para;</a></h2>
-<h3 id="metodos-basicos"><strong>Métodos Básicos</strong><a class="headerlink" href="#metodos-basicos" title="Permanent link">&para;</a></h3>
+<h2 id="o-que-sao-variaveis">📌 <strong>O Que São Variáveis?</strong><a class="headerlink" href="#o-que-sao-variaveis" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Definição</strong>: Espaço nomeado na memória que armazena um valor durante a execução do programa.</li>
+<li><strong>Características</strong>:</li>
+<li>Possuem <strong>tipo</strong> (define o tipo de dado).</li>
+<li>Possuem <strong>nome</strong> (identificador).</li>
+<li>Podem ter seu valor alterado (exceto constantes).</li>
+</ul>
+<hr />
+<h2 id="declaracao-e-inicializacao">🔧 <strong>Declaração e Inicialização</strong><a class="headerlink" href="#declaracao-e-inicializacao" title="Permanent link">&para;</a></h2>
+<h3 id="sintaxe-basica">Sintaxe Básica:<a class="headerlink" href="#sintaxe-basica" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">tipo</span><span class="w"> </span><span class="n">nomeDaVariavel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="exemplo">Exemplo:<a class="headerlink" href="#exemplo" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">idade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span><span class="w">                </span><span class="c1">// Declaração + inicialização</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">salario</span><span class="p">;</span><span class="w">                </span><span class="c1">// Declaração (não inicializada)</span>
+<span class="n">salario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4500.50</span><span class="p">;</span><span class="w">             </span><span class="c1">// Inicialização posterior</span>
+</code></pre></div>
+<hr />
+<h2 id="tipos-de-variaveis">🧩 <strong>Tipos de Variáveis</strong><a class="headerlink" href="#tipos-de-variaveis" title="Permanent link">&para;</a></h2>
+<h3 id="1-primitivas">1. <strong>Primitivas</strong><a class="headerlink" href="#1-primitivas" title="Permanent link">&para;</a></h3>
+<p>Armazenam valores diretamente. Tipos principais:</p>
 <table>
 <thead>
 <tr>
-<th>Método</th>
-<th>Descrição</th>
+<th>Tipo</th>
+<th>Exemplo</th>
+<th>Tamanho</th>
+<th>Valor Padrão</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>System.out.print()</code></td>
-<td>Exibe texto sem quebra de linha.</td>
+<td><code>int</code></td>
+<td><code>42</code></td>
+<td>32 bits</td>
+<td>0</td>
 </tr>
 <tr>
-<td><code>System.out.println()</code></td>
-<td>Exibe texto com quebra de linha.</td>
+<td><code>double</code></td>
+<td><code>3.14</code></td>
+<td>64 bits</td>
+<td>0.0</td>
 </tr>
 <tr>
-<td><code>System.out.printf()</code></td>
-<td>Formata saída (similar ao C).</td>
+<td><code>boolean</code></td>
+<td><code>true</code>/<code>false</code></td>
+<td>1 bit</td>
+<td>false</td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td><code>'A'</code></td>
+<td>16 bits</td>
+<td><code>\u0000</code></td>
 </tr>
 </tbody>
 </table>
+<h3 id="2-referencia">2. <strong>Referência</strong><a class="headerlink" href="#2-referencia" title="Permanent link">&para;</a></h3>
+<p>Armazenam endereços de memória (objetos):
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">nome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Java&quot;</span><span class="p">;</span><span class="w">    </span><span class="c1">// Referência a um objeto String</span>
+<span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"> </span>
+</code></pre></div></p>
 <hr />
-<h3 id="formatacao-avancada-com-printf">🎨 <strong>Formatação Avançada com <code>printf</code></strong><a class="headerlink" href="#formatacao-avancada-com-printf" title="Permanent link">&para;</a></h3>
+<h2 id="escopo-de-variaveis">🌐 <strong>Escopo de Variáveis</strong><a class="headerlink" href="#escopo-de-variaveis" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Especificador</th>
 <th>Tipo</th>
+<th>Onde Vive?</th>
 <th>Exemplo</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>%d</code></td>
-<td>Inteiro</td>
-<td><code>%05d</code> → 00042</td>
+<td><strong>Local</strong></td>
+<td>Dentro de um método/bloco</td>
+<td><code>void metodo() { int x; }</code></td>
 </tr>
 <tr>
-<td><code>%f</code></td>
-<td>Decimal</td>
-<td><code>%.2f</code> → 3.14</td>
+<td><strong>Instância</strong></td>
+<td>Dentro de um objeto</td>
+<td><code>class Pessoa { int idade; }</code></td>
 </tr>
 <tr>
-<td><code>%s</code></td>
-<td>String</td>
-<td><code>%-10s</code> → alinhado à esquerda</td>
-</tr>
-<tr>
-<td><code>%n</code></td>
-<td>Quebra linha</td>
-<td><code>"Linha1%nLinha2"</code></td>
+<td><strong>Classe (static)</strong></td>
+<td>Pertence à classe</td>
+<td><code>static int contador;</code></td>
 </tr>
 </tbody>
 </table>
-<div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="n">preco</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">19.9876</span><span class="p">;</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Preço: R$ %,.2f%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">preco</span><span class="p">);</span><span class="w"> </span><span class="c1">// Preço: R$ 19,99</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Saida</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Olá, &quot;</span><span class="p">);</span><span class="w">        </span><span class="c1">// Sem quebra</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mundo!&quot;</span><span class="p">);</span><span class="w">     </span><span class="c1">// Com quebra</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;PI: %.2f&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">PI</span><span class="p">);</span><span class="w"> </span><span class="c1">// PI: 3.14</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExemploEscopo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">variavelClasse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">   </span><span class="c1">// static</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">metodo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">variavelLocal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w">       </span><span class="c1">// local</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">variavelClasse</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">variavelLocal</span><span class="p">);</span><span class="w"> </span><span class="c1">// 30</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <hr />
-<h2 id="entrada-com-scanner">📥 <strong>Entrada com <code>Scanner</code></strong><a class="headerlink" href="#entrada-com-scanner" title="Permanent link">&para;</a></h2>
-<h3 id="passo-1-importar-a-classe"><strong>Passo 1: Importar a Classe</strong><a class="headerlink" href="#passo-1-importar-a-classe" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
-</code></pre></div>
-<h3 id="passo-2-criar-um-objeto-scanner"><strong>Passo 2: Criar um Objeto Scanner</strong><a class="headerlink" href="#passo-2-criar-um-objeto-scanner" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">Scanner</span><span class="w"> </span><span class="n">leitor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-</code></pre></div>
-<h3 id="passo-3-ler-dados"><strong>Passo 3: Ler Dados</strong><a class="headerlink" href="#passo-3-ler-dados" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Método</th>
-<th>Tipo Lido</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>nextInt()</code></td>
-<td><code>int</code></td>
-</tr>
-<tr>
-<td><code>nextDouble()</code></td>
-<td><code>double</code></td>
-</tr>
-<tr>
-<td><code>nextLine()</code></td>
-<td><code>String</code> (linha)</td>
-</tr>
-<tr>
-<td><code>next().charAt(0)</code></td>
-<td><code>char</code> (primeiro caractere)</td>
-</tr>
-</tbody>
-</table>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Entrada</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">leitor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Nome: &quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leitor</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
-
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Idade: &quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">idade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leitor</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%s tem %d anos.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nome</span><span class="p">,</span><span class="w"> </span><span class="n">idade</span><span class="p">);</span>
-<span class="w">        </span><span class="n">leitor</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"> </span><span class="c1">// Fechar o scanner!</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<hr />
-<h2 id="funcionamento-do-scanner">Funcionamento do Scanner<a class="headerlink" href="#funcionamento-do-scanner" title="Permanent link">&para;</a></h2>
-<p>A classe <strong><code>Scanner</code></strong> em Java é uma ferramenta versátil para ler e analisar dados de fluxos de entrada, como <code>System.in</code> (entrada padrão, geralmente o teclado). Ela simplifica a leitura de dados primitivos e strings, tokenizando a entrada de acordo com delimitadores específicos. Vamos entender passo a passo como ela lida com <code>System.in</code>:</p>
-<hr />
-<h3 id="1-como-o-scanner-se-conecta-ao-systemin"><strong>1. Como o <code>Scanner</code> se Conecta ao <code>System.in</code></strong><a class="headerlink" href="#1-como-o-scanner-se-conecta-ao-systemin" title="Permanent link">&para;</a></h3>
+<h2 id="inferencia-de-tipo-com-var-java-10">🆕 <strong>Inferência de Tipo com <code>var</code> (Java 10+)</strong><a class="headerlink" href="#inferencia-de-tipo-com-var-java-10" title="Permanent link">&para;</a></h2>
+<p>Java permite declarar variáveis locais sem especificar o tipo explicitamente:
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">nome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Java&quot;</span><span class="p">;</span><span class="w">           </span><span class="c1">// Inferido como String</span>
+<span class="kd">var</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span><span class="w"> </span><span class="c1">// ArrayList&lt;String&gt;</span>
+<span class="kd">var</span><span class="w"> </span><span class="n">idade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span><span class="w">              </span><span class="c1">// Inferido como int</span>
+</code></pre></div></p>
+<h3 id="limitacoes-do-var">Limitações do <code>var</code>:<a class="headerlink" href="#limitacoes-do-var" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong><code>System.in</code></strong> é um objeto do tipo <code>InputStream</code> que representa a entrada padrão (teclado).</li>
-<li>Ao criar um <code>Scanner</code>, você o associa a <code>System.in</code>:
-  <div class="highlight"><pre><span></span><code><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-</code></pre></div></li>
-<li>O <code>Scanner</code> lê dados do buffer de entrada, que é preenchido quando o usuário pressiona <strong>Enter</strong>.</li>
+<li>Só funciona para <strong>variáveis locais</strong>.</li>
+<li>Não pode ser usado em parâmetros ou campos de classe.</li>
 </ul>
 <hr />
-<h3 id="2-tokenizacao-da-entrada"><strong>2. Tokenização da Entrada</strong><a class="headerlink" href="#2-tokenizacao-da-entrada" title="Permanent link">&para;</a></h3>
-<p>O <code>Scanner</code> divide a entrada em <strong>tokens</strong> usando um delimitador padrão (espaço em branco, tabulação ou quebra de linha). Exemplo:
-- <strong>Entrada</strong>: <code>"João 25 70.5"</code><br />
-- <strong>Tokens</strong>: <code>"João"</code>, <code>"25"</code>, <code>"70.5"</code>.</p>
-<hr />
-<h3 id="3-metodos-para-ler-dados"><strong>3. Métodos para Ler Dados</strong><a class="headerlink" href="#3-metodos-para-ler-dados" title="Permanent link">&para;</a></h3>
-<p>O <code>Scanner</code> oferece métodos para ler tokens específicos:</p>
-<table>
-<thead>
-<tr>
-<th>Método</th>
-<th>Tipo Lido</th>
-<th>Comportamento</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>nextInt()</code></td>
-<td><code>int</code></td>
-<td>Lê o próximo token como <code>int</code>. Ignora espaços antes do token.</td>
-</tr>
-<tr>
-<td><code>nextDouble()</code></td>
-<td><code>double</code></td>
-<td>Lê o próximo token como <code>double</code>.</td>
-</tr>
-<tr>
-<td><code>next()</code></td>
-<td><code>String</code></td>
-<td>Lê o próximo token até o delimitador.</td>
-</tr>
-<tr>
-<td><code>nextLine()</code></td>
-<td><code>String</code></td>
-<td>Lê <strong>toda a linha</strong> até a quebra de linha (<code>\n</code>).</td>
-</tr>
-<tr>
-<td><code>hasNextInt()</code></td>
-<td><code>boolean</code></td>
-<td>Verifica se o próximo token pode ser lido como <code>int</code>.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="4-funcionamento-do-buffer"><strong>4. Funcionamento do Buffer</strong><a class="headerlink" href="#4-funcionamento-do-buffer" title="Permanent link">&para;</a></h3>
+<h2 id="constantes-final">🔒 <strong>Constantes (<code>final</code>)</strong><a class="headerlink" href="#constantes-final" title="Permanent link">&para;</a></h2>
+<p>Variáveis que não podem ser alteradas após a inicialização:
+<div class="highlight"><pre><span></span><code><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.1415926535</span><span class="p">;</span>
+<span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">NOME_CURSO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;POO com Java&quot;</span><span class="p">;</span>
+</code></pre></div></p>
+<h3 id="boas-praticas">Boas Práticas:<a class="headerlink" href="#boas-praticas" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Quando o usuário digita <code>"42\n"</code> (número + Enter), o buffer contém <code>"42\n"</code>.</li>
-<li><strong><code>nextInt()</code></strong>: Lê <code>42</code> e <strong>deixa <code>\n</code> no buffer</strong>.</li>
-<li><strong><code>nextLine()</code></strong>: Lê o <code>\n</code> restante, resultando em uma string vazia (<code>""</code>).</li>
+<li>Use nomes em <strong>MAIÚSCULAS</strong> para constantes.</li>
+<li>Inicialize no momento da declaração.</li>
 </ul>
-<h4 id="exemplo-de-problema-comum"><strong>Exemplo de Problema Comum</strong>:<a class="headerlink" href="#exemplo-de-problema-comum" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Idade: &quot;</span><span class="p">);</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">idade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w"> </span><span class="c1">// Lê o número, deixa o &#39;\n&#39; no buffer</span>
-
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Nome: &quot;</span><span class="p">);</span>
-<span class="n">String</span><span class="w"> </span><span class="n">nome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"> </span><span class="c1">// Lê o &#39;\n&#39; residual → nome = &quot;&quot;</span>
-</code></pre></div>
-<h4 id="solucao"><strong>Solução</strong>:<a class="headerlink" href="#solucao" title="Permanent link">&para;</a></h4>
-<p>Após métodos como <code>nextInt()</code>, consuma o <code>\n</code> residual com <code>nextLine()</code>:
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">idade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-<span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"> </span><span class="c1">// Consome o &#39;\n&#39;</span>
+<hr />
+<h2 id="erros-comuns">⚠️ <strong>Erros Comuns</strong><a class="headerlink" href="#erros-comuns" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Usar variável não inicializada</strong>:
+   <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// Erro de compilação!</span>
 </code></pre></div></p>
-<hr />
-<h3 id="5-gerenciamento-de-excecoes"><strong>5. Gerenciamento de Exceções</strong><a class="headerlink" href="#5-gerenciamento-de-excecoes" title="Permanent link">&para;</a></h3>
-<p>O <code>Scanner</code> pode lançar exceções se o input não corresponder ao tipo esperado:
-- <strong><code>InputMismatchException</code></strong>: Quando o token não pode ser convertido (ex: letras para <code>nextInt()</code>).
-- <strong>Solução</strong>: Use <code>hasNextInt()</code>, <code>hasNextDouble()</code>, etc., para verificar antes de ler:
-  <div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">scanner</span><span class="p">.</span><span class="na">hasNextInt</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número inválido!&quot;</span><span class="p">);</span>
-<span class="p">}</span>
+</li>
+<li>
+<p><strong>Confundir tipos</strong>:
+   <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.5</span><span class="p">;</span><span class="w"> </span><span class="c1">// Erro: double não cabe em int</span>
 </code></pre></div></p>
-<hr />
-<h3 id="6-fechando-o-scanner"><strong>6. Fechando o <code>Scanner</code></strong><a class="headerlink" href="#6-fechando-o-scanner" title="Permanent link">&para;</a></h3>
-<p>Sempre feche o <code>Scanner</code> após o uso para liberar recursos (embora <code>System.in</code> não seja fechado permanentemente):
-<div class="highlight"><pre><span></span><code><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</li>
+<li>
+<p><strong>Esquecer que objetos são referências</strong>:
+   <div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;Java&quot;</span><span class="p">);</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;Java&quot;</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span><span class="w"> </span><span class="c1">// false (compara endereços)</span>
 </code></pre></div></p>
-<hr />
-<h2 id="exemplo-completo"><strong>Exemplo Completo</strong><a class="headerlink" href="#exemplo-completo" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExemploScanner</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Digite seu nome: &quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
-
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Digite sua idade: &quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">idade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-<span class="w">        </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"> </span><span class="c1">// Limpa o buffer</span>
-
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Digite seu peso (kg): &quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">peso</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
-<span class="w">        </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"> </span><span class="c1">// Limpa o buffer</span>
-
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Nome: %s, Idade: %d, Peso: %.1f kg&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nome</span><span class="p">,</span><span class="w"> </span><span class="n">idade</span><span class="p">,</span><span class="w"> </span><span class="n">peso</span><span class="p">);</span>
-
-<span class="w">        </span><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<hr />
-<h2 id="resumo"><strong>Resumo</strong><a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Tokenização</strong>: Divide a entrada em partes usando delimitadores.</li>
-<li><strong>Buffer Management</strong>: Cuidado com resíduos de <code>\n</code> após métodos como <code>nextInt()</code>.</li>
-<li><strong>Validação</strong>: Use <code>hasNext...()</code> para evitar exceções.</li>
-<li><strong>Fechamento</strong>: Sempre feche o <code>Scanner</code> para evitar vazamentos.</li>
-</ul>
-<p>Entender esses detalhes ajuda a evitar erros comuns e a criar interações de entrada mais robustas! 😊</p>
-<hr />
-<h2 id="entrada-com-console">🆕 <strong>Entrada com <code>Console</code></strong><a class="headerlink" href="#entrada-com-console" title="Permanent link">&para;</a></h2>
-<p>Alternativa mais segura para senhas (não ecoa caracteres):</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.Console</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ConsoleExemplo</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Console</span><span class="w"> </span><span class="n">console</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">console</span><span class="p">();</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">console</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Console não disponível!&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="k">return</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-
-<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">usuario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">console</span><span class="p">.</span><span class="na">readLine</span><span class="p">(</span><span class="s">&quot;Usuário: &quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">senha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">console</span><span class="p">.</span><span class="na">readPassword</span><span class="p">(</span><span class="s">&quot;Senha: &quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">console</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Bem-vindo, %s!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">usuario</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+</li>
+</ol>
 <hr />
 <h2 id="exercicios-praticos">🧪 <strong>Exercícios Práticos</strong><a class="headerlink" href="#exercicios-praticos" title="Permanent link">&para;</a></h2>
 <ol>
+<li><strong>Conversor de Moeda</strong>:</li>
+<li>Declare uma constante <code>TAXA_CAMBIO = 5.30</code> (BRL para USD).</li>
 <li>
-<p><strong>Calculadora Simples</strong>:<br />
-   Leia dois números e exiba a soma, subtração e multiplicação.</p>
+<p>Leia um valor em reais e converta para dólares.</p>
 </li>
 <li>
-<p><strong>Formulário de Cadastro</strong>:<br />
-   Leia nome, email e idade, e exiba os dados formatados.</p>
+<p><strong>Calculadora de IMC</strong>:</p>
+</li>
+<li>Use variáveis para peso (kg) e altura (m).</li>
+<li>
+<p>Calcule e exiba o IMC (peso / altura²).</p>
 </li>
 <li>
-<p><strong>Conversor de Temperatura</strong>:<br />
-   Leia graus Celsius e converta para Fahrenheit (F = C * 1.8 + 32).</p>
+<p><strong>Gerenciador de Contatos</strong>:</p>
 </li>
+<li>Crie uma classe <code>Contato</code> com variáveis de instância <code>nome</code> e <code>telefone</code>.</li>
 </ol>
+<hr />
+<p><code>admonition tip "Dica"
+Use `var` para simplificar código com tipos óbvios, mas prefira tipos explícitos em casos ambíguos!</code></p>
 
 
 
 
 
 
+
+  
+  
 
 
 
