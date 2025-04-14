@@ -11,4 +11,3 @@
 ## Para executar
 
 > `java HelloWorld`
-
