@@ -1,17 +1,27 @@
-# Welcome to MkDocs
+# Início
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## 🚀 Programação Orientada a Objetos com Java  
 
-## Commands
+Bem-vindo(a) ao site oficial da disciplina **POO com Java**! Aqui você encontrará materiais, exemplos de código, exercícios e tutoriais para dominar os conceitos de **orientação a objetos** e aplicá-los usando a linguagem Java.  
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+---
 
-## Project layout
+## 🧠 **Por Que Java para POO?**  
+Java é uma das linguagens mais usadas no mundo para ensinar POO porque:
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- **Sintaxe clara** e orientada a objetos.  
+- **Ecossistema robusto** (Android, Spring, big data).  
+- **Atualizações modernas** (lambdas, records, sealed classes).  
+
+```java
+// Exemplo de classe em Java
+public class Aluno {
+    private String nome;
+    public Aluno(String nome) { 
+        this.nome = nome; 
+    }
+    public void estudar() {
+        System.out.println(nome + " está estudando POO!");
+    }
+}
+```

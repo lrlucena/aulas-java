@@ -1,4 +1,4 @@
-site_name: Curso de Java
+site_name: 🚀 Programação Orientada a Objetos com Java
 site_url: "https://lrlucena.github.io/aulas-java"
 site_description: "Site da disciplina"
 repo_url: "https://github.com/lrlucena/aulas-java"
@@ -30,21 +30,28 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
-      toc_depth: 3
+      toc_depth: 2
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 plugins:
   - search
-  - git-revision-date-localized
+#  - git-revision-date-localized
 
-nav:
-  - Início: index.md
+#nav:
+#  - Início: index.md
 #  - Programa da Disciplina: programa.md
 #  - Cronograma: cronograma.md
-  - Materiais:
-    - Aulas: materiais/aulas.md
-    - Exercícios: materiais/exercicios.md
+#  - Materiais:
+#    - Aulas: materiais/aulas.md
+#    - Exercícios: materiais/exercicios.md
 #  - Avaliações: avaliacoes.md
 #  - Contato: contato.md
