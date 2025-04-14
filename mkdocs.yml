@@ -1,1 +1,50 @@
-site_name: My Docs
+site_name: Curso de Java
+site_url: "https://lrlucena.github.io/aulas-java"
+site_description: "Site da disciplina"
+repo_url: "https://github.com/lrlucena/aulas-java"
+
+theme:
+  name: material
+#  custom_dir: overrides
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - toc.integrate
+    - navigation.top
+  palette:
+    primary: 'green'
+    accent: 'yellow'
+  logo: assets/images/logo-ifrn.png
+  favicon: assets/images/favicon.png
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ifrn
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+
+plugins:
+  - search
+  - git-revision-date-localized
+
+nav:
+  - Início: index.md
+#  - Programa da Disciplina: programa.md
+#  - Cronograma: cronograma.md
+  - Materiais:
+    - Aulas: materiais/aulas.md
+    - Exercícios: materiais/exercicios.md
+#  - Avaliações: avaliacoes.md
+#  - Contato: contato.md
